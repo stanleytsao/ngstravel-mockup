@@ -1,6 +1,8 @@
 # NGS Travel website
 ~Under construction
 
+---
+
 #### To do:
 - Responsive Grid based on mockup
     - Full width header and footer template
@@ -11,3 +13,8 @@
     - w/ contact info
 - Fill content
 - Ad banner (right side)
+
+---
+
+#### Preview:
+[Click Here for sample Home page](https://stanleytsao.github.io/ngstravel/)
