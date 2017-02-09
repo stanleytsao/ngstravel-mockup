@@ -1,0 +1,40 @@
+body {
+	color: #fff;
+}
+
+nav {
+	background-color: #333;
+	height: 100px;
+}
+
+footer {
+	background-color: #000;
+	height: 200px;
+}
+
+.content {
+	height: 500px;
+}
+
+.slider {
+	background-color: #f77;
+	height: 200px;
+}
+
+.box1, .box2 {
+	background-color: #666;
+	border: 5px solid #fff;
+	height: 85%;
+}
+
+.box3 {
+	background-color: #666;
+	border: 5px solid #fff;
+	height: 15%;
+}
+
+.box4 {
+	background-color: #666;
+	border: 5px solid #fff;
+	height: 100%;
+}
