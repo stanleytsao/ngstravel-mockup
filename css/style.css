@@ -8,7 +8,11 @@ nav {
 }
 
 #titleChn {
-	font-size: 2.1em;
+	font-size: 2.4em;
+}
+
+#titleEng {
+	font-size: 1.2em;
 }
 
 footer {
@@ -19,6 +23,7 @@ footer {
 .slider {
 	background-color: #f77;
 	height: 30%;
+	margin-top: 95px;
 }
 
 .box1, .box2 {
