@@ -8,9 +8,7 @@
 <body>
 	
 	<?php include("includes/header.html");?>
-
 	
-
 	<!-- Slider -->
 	<section class="slider container-fluid text-center">
 		Slider
@@ -18,34 +16,79 @@
 	</section>
 
 	<!-- Main Content -->
-	<div class="container content">
+	<main class="container">
 		<div class="row">
 			<div class="col-md-10">
 				<div class="row">
-					<div class="col-md-7 box1">
+					
+					<section class="col-md-6" id="new">
 						<h2>New Packages</h2>
-						<ul>
-							<li class="item">item1</li>
-							<li class="item">item2</li>
-							<li class="item">item3</li>
-						</ul>
-					</div>
-					<div class="col-md-5 box2">
+						<img src="http://placehold.it/350x150">
+						<img src="http://placehold.it/350x150">
+						<img src="http://placehold.it/350x150">
+					</section>
+					
+					<section class="col-md-6 box2" id="popular">
 						<h2>Most Popular</h2>
-						<ul>
-							<li class="item">item1</li>
-							<li class="item">item2</li>
-							<li class="item">item3</li>
-						</ul>
+						<img src="http://placehold.it/350x150">
+						<img src="http://placehold.it/350x150">
+						<img src="http://placehold.it/350x150">
+						
+					</section>
+				</div>
+				
+				<section class="row">
+					<h3>Section</h3>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 box3">Box3</div>
-				</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+				</section>
+				
+				<section class="row">
+					<h3>Section</h3>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+					<div class="col-md-4">
+						<img src="http://placehold.it/250x100">
+					</div>
+				</section>
+
 			</div>
-			<div class="col-md-2 box4">Ads</div>
+			
+			<aside class="col-md-2 box4">
+				Ads
+				<img src="http://placehold.it/150x1000">
+			</aside>
 		</div>
-	</div>
+	</main>
 	
 	<?php include("includes/footer.html");?>
 
