@@ -7,6 +7,19 @@ nav {
 	padding: 10px 0;
 }
 
+.navChn {
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.navEng {
+	color: #fff;
+}
+
+.icon-bar {
+	background-color: #fff;
+}
+
 #titleChn {
 	font-size: 2.4em;
 }
