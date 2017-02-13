@@ -5,12 +5,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    
 	<title>故鄉旅遊 - NGS Travel</title>
 </head>
 <body>
 	
 	<?php include("includes/header.html");?>
-	
+
 	<!-- Slider -->
 	<section class="slider container-fluid text-center">
 		Slider
@@ -28,6 +31,7 @@
 						<img src="http://placehold.it/350x150">
 						<img src="http://placehold.it/350x150">
 						<img src="http://placehold.it/350x150">
+						<button class="more">Show more</button>
 					</section>
 					
 					<section class="col-md-6 box2" id="popular">
@@ -35,34 +39,12 @@
 						<img src="http://placehold.it/350x150">
 						<img src="http://placehold.it/350x150">
 						<img src="http://placehold.it/350x150">
-						
+						<button class="more">Show more</button>
 					</section>
 				</div>
 				
 				<section class="row">
-					<h3>Section</h3>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-					<div class="col-md-4">
-						<img src="http://placehold.it/250x100">
-					</div>
-				</section>
-				
-				<section class="row">
-					<h3>Section</h3>
+					<h3>Other Resources</h3>
 					<div class="col-md-4">
 						<img src="http://placehold.it/250x100">
 					</div>
@@ -87,12 +69,14 @@
 			
 			<aside class="col-md-2 box4">
 				Ads
-				<img src="http://placehold.it/150x1000">
+				<img src="http://placehold.it/150x900">
 			</aside>
 		</div>
 	</main>
 	
 	<?php include("includes/footer.html");?>
+
+	<script src="app.js"></script>
 
 </body>
 </html>

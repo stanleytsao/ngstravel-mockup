@@ -1,0 +1,53 @@
+/*Header*/
+.header {
+	background-color: #eee;
+	color: #333;
+}
+
+.header a {
+	color: #333;
+}
+
+.icon-bar {
+	background-color: #fff;
+}
+
+#titleChn {	
+	font-family: 'cwTeXFangSong', serif;
+	font-size: 2.4em;
+}
+
+#titleEng {
+	font-size: 1.2em;
+	font-family: serif;
+	line-height: 0.5em;
+}
+
+.headChn {
+	font-family: 'cwTeXFangSong', serif;
+	font-size: 1.8em;
+}
+
+.headEng {
+	font-size: 1.2em;
+}
+
+/*Nav Bar*/
+.pager li>a {
+	background-color: #33f;
+}
+
+.pages {
+	background-color: #333;
+	margin-top: 65px;
+}
+
+.navChn {
+	font-family: 'cwTeXFangSong', serif;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.navEng {
+	color: #fff;
+}

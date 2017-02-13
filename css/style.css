@@ -1,46 +1,6 @@
 body {
 	color: #fff;
-	font-family: 'cwTeXFangSong', serif;
-}
-
-.header {
-	background-color: #999;
-}
-
-.pager li>a {
-	background-color: #33f;
-}
-
-.pages {
-	background-color: #333;
-	margin-top: 65px;
-}
-
-.navChn {
-	font-size: 1.5em;
-	color: #fff;
-}
-
-.navEng {
-	color: #fff;
 	font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.icon-bar {
-	background-color: #fff;
-}
-
-#titleChn {
-	font-size: 2.4em;
-}
-
-#titleEng {
-	font-size: 1.2em;
-}
-
-footer {
-	background-color: #000;
-	height: 20%;
 }
 
 .slider {
