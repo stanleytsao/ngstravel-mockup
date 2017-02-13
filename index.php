@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 	<title>故鄉旅遊 - NGS Travel</title>

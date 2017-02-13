@@ -1,10 +1,19 @@
 body {
 	color: #fff;
+	font-family: 'cwTeXFangSong', serif;
 }
 
-nav {
+.header {
 	background-color: #999;
-	padding: 10px 0;
+}
+
+.pager li>a {
+	background-color: #33f;
+}
+
+.pages {
+	background-color: #333;
+	margin-top: 65px;
 }
 
 .navChn {
@@ -14,6 +23,7 @@ nav {
 
 .navEng {
 	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .icon-bar {
@@ -36,7 +46,6 @@ footer {
 .slider {
 	background-color: #f77;
 	height: 30%;
-	margin-top: 95px;
 }
 
 main section, aside {
