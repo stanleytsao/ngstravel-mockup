@@ -2,6 +2,8 @@
 .header {
 	background-color: #eee;
 	color: #333;
+	max-height: 70px;
+	overflow: hidden;
 }
 
 .header a {
@@ -9,7 +11,11 @@
 }
 
 .icon-bar {
-	background-color: #fff;
+	background-color: #333;
+}
+
+.title {
+	max-width: 10em;
 }
 
 #titleChn {	
@@ -33,13 +39,13 @@
 }
 
 /*Nav Bar*/
-.pager li>a {
-	background-color: #33f;
+.pages {
+	background-color: #ddd;
+	margin-top: 70px;
 }
 
-.pages {
-	background-color: #333;
-	margin-top: 65px;
+.pager li>a {
+	background-color: #33f;
 }
 
 .navChn {
