@@ -5,7 +5,8 @@ body {
 
 .slider {
 	background-color: #f77;
-	height: 30%;
+	height: 35%;
+	margin-top: -46px;
 }
 
 main section, aside {
@@ -19,7 +20,7 @@ section img {
 	padding: 10px 0;
 }
 
-@media (min-width: 992px) and (max-width: 1200px){
+@media (max-width: 992px){
 	.col-md-2 {
 		display: none;
 	}

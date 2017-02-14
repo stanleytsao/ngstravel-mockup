@@ -1,21 +1,12 @@
 /*Header*/
 .header {
-	background-color: #eee;
-	color: #333;
+	background-color: #ddd;
+	color: #337ab7;
 	max-height: 70px;
-	overflow: hidden;
-}
-
-.header a {
-	color: #333;
 }
 
 .icon-bar {
 	background-color: #333;
-}
-
-.title {
-	max-width: 10em;
 }
 
 #titleChn {	
@@ -26,7 +17,7 @@
 #titleEng {
 	font-size: 1.2em;
 	font-family: serif;
-	line-height: 0.5em;
+	line-height: 0.4em;
 }
 
 .headChn {
@@ -38,22 +29,33 @@
 	font-size: 1.2em;
 }
 
+/*Collapsed*/
+.nav {
+	float: right;
+}
+
+.nav a {
+	background-color: #ddd;
+}
+
 /*Nav Bar*/
 .pages {
-	background-color: #ddd;
-	margin-top: 70px;
+	background-color: transparent;
+}
+
+.pager {
+	margin: 0;
 }
 
 .pager li>a {
-	background-color: #33f;
+	background-color: #ddd;
 }
 
 .navChn {
 	font-family: 'cwTeXFangSong', serif;
 	font-size: 1.5em;
-	color: #fff;
 }
 
 .navEng {
-	color: #fff;
+	line-height: 0.5em;
 }

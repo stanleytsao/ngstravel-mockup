@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -16,6 +17,9 @@
 
 	<!-- Slider -->
 	<section class="slider container-fluid text-center">
+		<br>
+		<br>
+		<br>
 		Slider
 		(4-5 Promotional Items)
 	</section>
@@ -77,6 +81,7 @@
 	<?php include("includes/footer.html");?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/app.js"></script>
 
 </body>
