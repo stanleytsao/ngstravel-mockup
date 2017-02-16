@@ -1,0 +1,24 @@
+{
+  "name": "ngstravel",
+  "version": "1.0.0",
+  "description": "~Under construction",
+  "main": "index.php",
+  "scripts": {
+    "babel": "babel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleytsao/ngstravel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanleytsao/ngstravel/issues"
+  },
+  "homepage": "https://github.com/stanleytsao/ngstravel#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8"
+  }
+}

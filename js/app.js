@@ -48,17 +48,16 @@ render();
 var $navButtons = $('.pager').find('a');
 var $headButtons = $('.nav').find('a');
 
-$navButtons.click(function () {
-	console.log(this.id);
+$navButtons.click( () => {
 	source = "pages/" + this.id + ".html"
 	render();
 });
 
-$headButtons.click(function () {
-	console.log(this.className);
+$headButtons.click( () => {
 	source = "pages/" + this.className + ".html"
 	render();
-});
+})
+
 
 
 
