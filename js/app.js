@@ -45,22 +45,20 @@ function render() {
 };
 render();
 
-var $taiwan = $('#taiwan');
-var $usCa = $('#usCa');
-var $europe = $('#europe');
-var $asia = $('#asia');
-var $oversea = $('#oversea');
-var $overseaUS = $('#overseaUS');
+var $navButtons = $('.pager').find('a');
+var $headButtons = $('.nav').find('a');
 
-var $target = $('.pager').find('a');
-
-$target.click(function () {
+$navButtons.click(function () {
 	console.log(this.id);
 	source = "pages/" + this.id + ".html"
 	render();
 });
 
-
+$headButtons.click(function () {
+	console.log(this.className);
+	source = "pages/" + this.className + ".html"
+	render();
+});
 
 
 
