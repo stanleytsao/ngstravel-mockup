@@ -1,5 +1,6 @@
 var $title = $('.title');
 var $pages = $('.pages');
+var $slider = $('.slider');
 
 (function headerFormat() {
 	
@@ -7,22 +8,20 @@ var $pages = $('.pages');
 		if ($(window).width() > 991){
 			$title.css({"max-width" : "10em"});
 			$pages.css({"margin-top" : "50px"});
-			$pages.find('a').css({"padding" : "20px 40px 5px"});
-			$pages.find('a').css({"display" : "inline-block"});
-			$('.slider').css({"margin-top" : "-46px"})
+			$pages.find('a').css({"padding" : "20px 30px 5px" , "display" : "inline-block"});
+			$slider.css({"margin-top" : "-46px"})
 		}
 		else if ($(window).width() > 767){
 			$title.css({"max-width" : "10em"});
 			$pages.css({"margin-top" : "50px"});
-			$pages.find('a').css({"padding" : "20px 25px 5px"});
-			$pages.find('a').css({"display" : "inline-block"});
-			$('.slider').css({"margin-top" : "-46px"})
+			$pages.find('a').css({"padding" : "20px 15px 5px" , "display" : "inline-block"});
+			$slider.css({"margin-top" : "-46px"})
 		}
 		else{
 			$title.css({"max-width" : "20em"});
 			$pages.css({"margin-top" : "30px"});
 			$pages.find('a').css({"display" : "none"});
-			$('.slider').css({"margin-top" : "20px"})
+			$slider.css({"margin-top" : "20px"})
 		}
 	};
 	resize();
@@ -32,3 +31,28 @@ var $pages = $('.pages');
 	});
 
 })();
+
+var $main = $('#main');
+var source = "pages/main.html"
+
+function render() {
+	$.ajax({
+	    url: source,
+	    success: function (data) { $main.append(data); },
+	    dataType: 'html'
+	});
+};
+render();
+
+var $taiwan = $('#taiwan');
+
+$taiwan.click(function () {
+	console.log(this.id);
+	source = "pages/taiwan.html"
+	render();
+});
+
+
+
+
+

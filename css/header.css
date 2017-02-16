@@ -49,6 +49,7 @@
 
 .pager li>a {
 	background-color: #ddd;
+	margin: 0 5px;
 }
 
 .navChn {

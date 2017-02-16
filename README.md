@@ -4,17 +4,18 @@
 ---
 
 #### To do:
-- Responsive Grid based on mockup
-    - Full width header and footer template
-    - Leave space for slider
-- Fixed Nav bar
-    - Nav bar funtionality 
-- Fixed Footer
-    - w/ contact info
-- Fill content
-- Ad banner (right side)
+- Responsive Grid for secondary pages based on mockup
+    - Inlcude header and footer template
+    - Leave space for Slider/Banner
+- Fill content (maybe setup simple database)
+- Create slider
+	- test functionality
+- Test responsivness
+- Ad banner 
+	- test functionality
+- Test page load speed
 
 ---
 
 #### Preview:
-[Click Here for sample Home page](https://stanleytsao.github.io/ngstravel/)
+[Click Here for sample Home page](https://ngstravel.herokuapp.com/)
