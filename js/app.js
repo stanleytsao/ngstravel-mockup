@@ -36,6 +36,7 @@ var $main = $('#main');
 var source = "pages/main.html"
 
 function render() {
+	$main.empty();
 	$.ajax({
 	    url: source,
 	    success: function (data) { $main.append(data); },
@@ -45,10 +46,17 @@ function render() {
 render();
 
 var $taiwan = $('#taiwan');
+var $usCa = $('#usCa');
+var $europe = $('#europe');
+var $asia = $('#asia');
+var $oversea = $('#oversea');
+var $overseaUS = $('#overseaUS');
 
-$taiwan.click(function () {
+var $target = $('.pager').find('a');
+
+$target.click(function () {
 	console.log(this.id);
-	source = "pages/taiwan.html"
+	source = "pages/" + this.id + ".html"
 	render();
 });
 
