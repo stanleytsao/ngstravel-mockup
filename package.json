@@ -19,8 +19,9 @@
   "homepage": "https://github.com/stanleytsao/ngstravel#readme",
   "devDependencies": {
     "babel-cli": "^6.23.0",
-    "babel-preset-env": "^1.1.8"
-  }
+    "babel-preset-env": "^1.1.8",
+    "express": "4.13.3"
+  },
   "engines": {
     "node": "4.5.0"
   }
