@@ -2,7 +2,7 @@ var $title = $('.title');
 var $pages = $('.pages');
 var $slider = $('.slider');
 
-(function headerFormat() {
+function headerFormat() {
 	
 	function resize() {
 		if ($(window).width() > 991){
@@ -30,16 +30,37 @@ var $slider = $('.slider');
 		resize();
 	});
 
-})();
+};
 
-var $main = $('#main');
-var source = "pages/main.html"
+function loadIncludes() {
+	$.ajax({
+	    url: "includes/header.html",
+	    success: function (data) { $('body').prepend(data); headerFormat()},
+	    dataType: 'html'
+	});
+	$.ajax({
+	    url: "includes/footer.html",
+	    success: function (data) { $('body').append(data); },
+	    dataType: 'html'
+	});
+	$.ajax({
+	    url: "includes/ads.html",
+	    success: function (data) { $('#ads').append(data); },
+	    dataType: 'html'
+	});
+};
+loadIncludes();
+
+
+
+var $pages = $('#pages');
+var source = "pages/main.js"
 
 function render() {
-	$main.empty();
+	$pages.empty();
 	$.ajax({
 	    url: source,
-	    success: function (data) { $main.append(data); },
+	    success: function (data) { $pages.append(data); },
 	    dataType: 'html'
 	});
 };
@@ -48,16 +69,16 @@ render();
 var $navButtons = $('.pager').find('a');
 var $headButtons = $('.nav').find('a');
 
-$navButtons.click( () => {
-	source = "pages/" + this.id + ".html"
+$navButtons.click( event => {
+	console.log(this);
+	source = "pages/" + this.id + ".js"
 	render();
 });
 
 $headButtons.click( () => {
-	source = "pages/" + this.className + ".html"
+	source = "pages/" + this.className + ".js"
 	render();
 })
-
 
 
 

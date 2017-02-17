@@ -4,7 +4,7 @@ var $title = $('.title');
 var $pages = $('.pages');
 var $slider = $('.slider');
 
-(function headerFormat() {
+function headerFormat() {
 
 	function resize() {
 		if ($(window).width() > 991) {
@@ -29,17 +29,42 @@ var $slider = $('.slider');
 	$(window).resize(function () {
 		resize();
 	});
-})();
+};
 
-var $main = $('#main');
-var source = "pages/main.html";
+function loadIncludes() {
+	$.ajax({
+		url: "includes/header.html",
+		success: function success(data) {
+			$('body').prepend(data);headerFormat();
+		},
+		dataType: 'html'
+	});
+	$.ajax({
+		url: "includes/footer.html",
+		success: function success(data) {
+			$('body').append(data);
+		},
+		dataType: 'html'
+	});
+	$.ajax({
+		url: "includes/ads.html",
+		success: function success(data) {
+			$('#ads').append(data);
+		},
+		dataType: 'html'
+	});
+};
+loadIncludes();
+
+var $pages = $('#pages');
+var source = "pages/main.js";
 
 function render() {
-	$main.empty();
+	$pages.empty();
 	$.ajax({
 		url: source,
 		success: function success(data) {
-			$main.append(data);
+			$pages.append(data);
 		},
 		dataType: 'html'
 	});
@@ -49,12 +74,13 @@ render();
 var $navButtons = $('.pager').find('a');
 var $headButtons = $('.nav').find('a');
 
-$navButtons.click(function () {
-	source = "pages/" + undefined.id + ".html";
+$navButtons.click(function (event) {
+	console.log(undefined);
+	source = "pages/" + undefined.id + ".js";
 	render();
 });
 
 $headButtons.click(function () {
-	source = "pages/" + undefined.className + ".html";
+	source = "pages/" + undefined.className + ".js";
 	render();
 });
