@@ -1,21 +1,21 @@
-var $title = $('.title');
-var $pages = $('.pages');
-var $slider = $('.slider');
-
 function headerFormat() {
 	
+	let $title = $('.title');
+	let $pages = $('.pages');
+	let $slider = $('.slider');
+
 	function resize() {
 		if ($(window).width() > 991){
 			$title.css({"max-width" : "10em"});
 			$pages.css({"margin-top" : "50px"});
 			$pages.find('a').css({"padding" : "20px 30px 5px" , "display" : "inline-block"});
-			$slider.css({"margin-top" : "-46px"})
+			$slider.css({"margin-top" : "-31px"})
 		}
 		else if ($(window).width() > 767){
 			$title.css({"max-width" : "10em"});
 			$pages.css({"margin-top" : "50px"});
 			$pages.find('a').css({"padding" : "20px 15px 5px" , "display" : "inline-block"});
-			$slider.css({"margin-top" : "-46px"})
+			$slider.css({"margin-top" : "-31px"})
 		}
 		else{
 			$title.css({"max-width" : "20em"});
@@ -35,12 +35,14 @@ function headerFormat() {
 function loadIncludes() {
 	$.ajax({
 	    url: "includes/header.html",
-	    success: function (data) { $('body').prepend(data); headerFormat()},
+	    success: function (data) { $('#header').append(data); },
+	    complete: headerFormat(),
 	    dataType: 'html'
 	});
 	$.ajax({
-	    url: "includes/footer.html",
-	    success: function (data) { $('body').append(data); },
+	    url: "includes/nav.html",
+	    success: function (data) { $('#nav').append(data); },
+	    complete: headerFormat(),
 	    dataType: 'html'
 	});
 	$.ajax({
@@ -48,19 +50,22 @@ function loadIncludes() {
 	    success: function (data) { $('#ads').append(data); },
 	    dataType: 'html'
 	});
+	$.ajax({
+	    url: "includes/footer.html",
+	    success: function (data) { $('#footer').append(data); },
+	    dataType: 'html'
+	});
 };
 loadIncludes();
 
-
-
-var $pages = $('#pages');
-var source = "pages/main.js"
+var $content = $('#content');
+var source = "pages/main.html"
 
 function render() {
-	$pages.empty();
+	$content.empty();
 	$.ajax({
 	    url: source,
-	    success: function (data) { $pages.append(data); },
+	    success: function (data) { $content.append(data); },
 	    dataType: 'html'
 	});
 };
@@ -79,6 +84,8 @@ $headButtons.click( () => {
 	source = "pages/" + this.className + ".js"
 	render();
 })
+
+
 
 
 

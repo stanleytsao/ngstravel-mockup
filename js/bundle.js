@@ -1,22 +1,22 @@
 'use strict';
 
-var $title = $('.title');
-var $pages = $('.pages');
-var $slider = $('.slider');
-
 function headerFormat() {
+
+	var $title = $('.title');
+	var $pages = $('.pages');
+	var $slider = $('.slider');
 
 	function resize() {
 		if ($(window).width() > 991) {
 			$title.css({ "max-width": "10em" });
 			$pages.css({ "margin-top": "50px" });
 			$pages.find('a').css({ "padding": "20px 30px 5px", "display": "inline-block" });
-			$slider.css({ "margin-top": "-46px" });
+			$slider.css({ "margin-top": "-31px" });
 		} else if ($(window).width() > 767) {
 			$title.css({ "max-width": "10em" });
 			$pages.css({ "margin-top": "50px" });
 			$pages.find('a').css({ "padding": "20px 15px 5px", "display": "inline-block" });
-			$slider.css({ "margin-top": "-46px" });
+			$slider.css({ "margin-top": "-31px" });
 		} else {
 			$title.css({ "max-width": "20em" });
 			$pages.css({ "margin-top": "30px" });
@@ -35,15 +35,17 @@ function loadIncludes() {
 	$.ajax({
 		url: "includes/header.html",
 		success: function success(data) {
-			$('body').prepend(data);headerFormat();
+			$('#header').append(data);
 		},
+		complete: headerFormat(),
 		dataType: 'html'
 	});
 	$.ajax({
-		url: "includes/footer.html",
+		url: "includes/nav.html",
 		success: function success(data) {
-			$('body').append(data);
+			$('#nav').append(data);
 		},
+		complete: headerFormat(),
 		dataType: 'html'
 	});
 	$.ajax({
@@ -53,18 +55,25 @@ function loadIncludes() {
 		},
 		dataType: 'html'
 	});
+	$.ajax({
+		url: "includes/footer.html",
+		success: function success(data) {
+			$('#footer').append(data);
+		},
+		dataType: 'html'
+	});
 };
 loadIncludes();
 
-var $pages = $('#pages');
-var source = "pages/main.js";
+var $content = $('#content');
+var source = "pages/main.html";
 
 function render() {
-	$pages.empty();
+	$content.empty();
 	$.ajax({
 		url: source,
 		success: function success(data) {
-			$pages.append(data);
+			$content.append(data);
 		},
 		dataType: 'html'
 	});
