@@ -32,17 +32,31 @@ function headerFormat() {
 
 };
 
+var $headerButtons, $navButtons
+
+function changeSource() {
+	$headerButtons.click(function () {
+		source = "pages/" + this.className + ".html";
+		render();
+	});
+};
+
 function loadIncludes() {
 	$.ajax({
 	    url: "includes/header.html",
 	    success: function (data) { $('#header').append(data); },
-	    complete: headerFormat(),
+	    complete: [headerFormat(), function () {
+	    	$headerButtons = $('#header').find('a');
+	    	changeSource();
+	    }],
 	    dataType: 'html'
 	});
 	$.ajax({
 	    url: "includes/nav.html",
 	    success: function (data) { $('#nav').append(data); },
-	    complete: headerFormat(),
+	    complete: [headerFormat(), function () {
+	    	$navButtons = $('#nav').find('a');
+	    }],
 	    dataType: 'html'
 	});
 	$.ajax({
@@ -58,8 +72,8 @@ function loadIncludes() {
 };
 loadIncludes();
 
-var $content = $('#content');
-var source = "pages/main.html"
+let $content = $('#content');
+let source = "pages/main.html"
 
 function render() {
 	$content.empty();
@@ -71,19 +85,7 @@ function render() {
 };
 render();
 
-var $navButtons = $('.pager').find('a');
-var $headButtons = $('.nav').find('a');
 
-$navButtons.click( event => {
-	console.log(this);
-	source = "pages/" + this.id + ".js"
-	render();
-});
-
-$headButtons.click( () => {
-	source = "pages/" + this.className + ".js"
-	render();
-})
 
 
 

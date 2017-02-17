@@ -31,13 +31,25 @@ function headerFormat() {
 	});
 };
 
+var $headerButtons, $navButtons;
+
+function changeSource() {
+	$headerButtons.click(function () {
+		source = "pages/" + this.className + ".html";
+		render();
+	});
+};
+
 function loadIncludes() {
 	$.ajax({
 		url: "includes/header.html",
 		success: function success(data) {
 			$('#header').append(data);
 		},
-		complete: headerFormat(),
+		complete: [headerFormat(), function () {
+			$headerButtons = $('#header').find('a');
+			changeSource();
+		}],
 		dataType: 'html'
 	});
 	$.ajax({
@@ -45,7 +57,9 @@ function loadIncludes() {
 		success: function success(data) {
 			$('#nav').append(data);
 		},
-		complete: headerFormat(),
+		complete: [headerFormat(), function () {
+			$navButtons = $('#nav').find('a');
+		}],
 		dataType: 'html'
 	});
 	$.ajax({
@@ -79,17 +93,3 @@ function render() {
 	});
 };
 render();
-
-var $navButtons = $('.pager').find('a');
-var $headButtons = $('.nav').find('a');
-
-$navButtons.click(function (event) {
-	console.log(undefined);
-	source = "pages/" + undefined.id + ".js";
-	render();
-});
-
-$headButtons.click(function () {
-	source = "pages/" + undefined.className + ".js";
-	render();
-});
